@@ -1,11 +1,11 @@
-import { Main } from './pages/Main'
+import { Dashboard } from "./pages/main_page/Dashboard"
 
 
 function App() {
   
   return (
     <div className='flex justify-center'>
-      <Main/>
+      <Dashboard/>
     </div>
   )
 }
