@@ -1,12 +1,12 @@
-import { useState } from 'react'
 import './App.css'
+import { ListRepository } from './pages/ListRepository'
+
 
 function App() {
-  const [count, setCount] = useState(0)
-
+  
   return (
-    <div className="bg-white">
-      <h1 className='text-red-900'>Hello World</h1>
+    <div className="bg-black">
+      <ListRepository/>
     </div>
   )
 }
