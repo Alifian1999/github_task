@@ -1,12 +1,11 @@
-import './App.css'
-import { ListRepository } from './pages/ListRepository'
+import { Main } from './pages/Main'
 
 
 function App() {
   
   return (
-    <div className="bg-black">
-      <ListRepository/>
+    <div className='flex justify-center'>
+      <Main/>
     </div>
   )
 }
