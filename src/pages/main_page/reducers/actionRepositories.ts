@@ -5,9 +5,9 @@ export const getListRespositories = createAsyncThunk(
     'list-repositories',
     async(_, { rejectWithValue}) => {
         try {
-            const data = await octokit.request('GET /users/{username}/repos', {
+            const data = await octokit.request('GET /users/{username}/repos?visibility=all&type=all&page=1&per_page=100&sort=updated', {
                 username : 'Alifian1999'
-            })
+            })            
             if(data.status === 200){
                 return { data : data.data}
             }

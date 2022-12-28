@@ -1,6 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import App from './App'
+import { AppRoute } from './routes'
 import './index.css'
 
 import { store } from './utilities/store';
@@ -9,7 +9,7 @@ import { Provider } from 'react-redux';
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>
     <Provider store={store}>
-      <App />
+      <AppRoute />
     </Provider>
   </React.StrictMode>,
 )
