@@ -1,11 +1,14 @@
-import { configureStore, ThunkAction, Action } from '@reduxjs/toolkit';
+import { configureStore, ThunkAction, Action, getDefaultMiddleware } from '@reduxjs/toolkit';
 
 import repositories from '../pages/main_page/getListRepositoriesSlice';
 
 export const store = configureStore({
     reducer: {
         list_repositories : repositories
-    }
+    },
+    middleware : (getDefaultMiddleware) => getDefaultMiddleware({
+      serializableCheck : false
+    })
 })
 
 export type AppDispatch = typeof store.dispatch;

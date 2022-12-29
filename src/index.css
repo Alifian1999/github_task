@@ -27,6 +27,7 @@ a:hover {
 body {
   min-width: 320px;
   min-height: 100vh;
+  background-color: rgb(219 234 254);
 }
 
 h1 {
@@ -44,10 +45,4 @@ button {
   cursor: pointer;
   transition: border-color 0.25s;
 }
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-}
+
