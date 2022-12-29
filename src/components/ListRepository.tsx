@@ -12,7 +12,7 @@ interface status{
     prev : boolean
 }
 
-export const ListRepository = () =>{
+export const ListRepository : React.FC = () =>{
     const selector = useSelector((state:any) => state.list_repositories)
     const totalItems = selector.total_repositories;
     const dispatch : any = useDispatch()
@@ -111,7 +111,7 @@ export const ListRepository = () =>{
                             <div className="flex flex-col justify-between">
                                 <span className="font-semibold">{e.name}</span>
                                 <div>
-                                    <span className="text-sm mr-2">{e.language}</span>
+                                    <span className="text-sm mr-2 font-normal">{e.language}</span>
                                     <span className="text-xs text-gray-400">{lastUpdate(e.updated_at)}</span>
                                 </div>
                             </div>

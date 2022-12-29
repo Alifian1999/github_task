@@ -6,8 +6,8 @@ export const getListRespositories = createAsyncThunk(
     'list-repositories',
     async(value:any, { rejectWithValue }) => {
         try {
-            let name = value.name !== undefined? value.name : 'Alifian1999'
-            let toPage = value.page;
+            let name : string = value.name !== undefined? value.name : 'Alifian1999'
+            let toPage : number = value.page;
             
             let totalRepository = await octokit.request('GET /users/{username}',{
                 username : name

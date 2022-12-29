@@ -6,7 +6,7 @@ import { ListRepository } from "../../components/ListRepository"
 
 import { getListRespositories } from "./reducers/actionRepositories"
 
-export const Dashboard = () =>{
+export const Dashboard : React.FC = () =>{
 
     const dispatch : any = useDispatch()
     useEffect(()=>{

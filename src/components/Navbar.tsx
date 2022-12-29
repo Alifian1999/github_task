@@ -1,15 +1,14 @@
 import { useSelector } from 'react-redux'
-
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGithub } from '@fortawesome/free-brands-svg-icons'
 import { faArrowAltCircleLeft } from '@fortawesome/free-regular-svg-icons'
 import { useParams } from 'react-router-dom'
 
 export const Navbar = () =>{
-    const selector = useSelector((state:any) => state.list_repositories)
-    const getTotalRepositories = selector.data?.length
+    const selector : any = useSelector((state:any) => state.list_repositories)
+    const getTotalRepositories : number = selector.data?.length
     const { name } = useParams()
-    const displayRepositories = name !== undefined? 1 : getTotalRepositories
+    const displayRepositories : number = name !== undefined? 1 : getTotalRepositories
 
     const previousPage = () =>{
         history.go(-1)

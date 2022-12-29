@@ -4,7 +4,7 @@ import { getSpecificRepository } from "../main_page/reducers/actionRepositories"
 import { Navbar } from "../../components/Navbar"
 
 
-export const DetailPage = () =>{
+export const DetailPage : React.FC = () =>{
     const dispatch = useDispatch<any>()
     let {name,repo} = useParams()
     
